@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-layout" aria-label="테트리스 게임">
+      <section class="next-panel" aria-labelledby="next-heading">
+        <h2 id="next-heading">다음 블록 <span lang="en">NEXT</span></h2>
+        <canvas id="next-block" width="150" height="120" aria-label="다음에 나올 블록 미리보기">
+          다음 블록 미리보기입니다.
+        </canvas>
+      </section>
+      <canvas id="game-board" width="300" height="600" aria-label="테트리스 게임 보드">
+        테트리스 게임 보드입니다. 캔버스를 지원하는 브라우저에서 열어 주세요.
+      </canvas>
+      <section class="score-panel" aria-labelledby="score-heading">
+        <h1 id="score-heading">점수</h1>
+        <p id="score" aria-live="polite" aria-atomic="true">0</p>
+        <h2>레벨</h2>
+        <p id="level" aria-live="polite" aria-atomic="true">1</p>
+        <p class="level-help">1,000점마다 레벨 UP</p>
+        <p id="game-status" role="status">0.5초마다 자동으로 내려옵니다.</p>
+        <button id="restart" type="button">다시시작</button>
+        <p>← → 이동<br>↓ 빠른 낙하<br>↑ 시계 방향 회전<br>Space 즉시 하강</p>
+      </section>
+    </main>
+  </body>
+</html>
